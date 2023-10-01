@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jorge Augusto">
+    <title>CALCULADORA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Dev. Jorge Augusto</h1>
+    </header>
+    <article>
+       
+        <!--CALCULADORA-->
+        
+        <section id="calculator">
+            <input id="visor" placeholder="0" disabled>
+            <table id="efeito">
+        
+                <tr>
+                    <td><button class="botao" onclick="add_numero(7)">7</button></td>
+                    <td><button class="botao" onclick="add_numero(8)">8</button></td>
+                    <td><button class="botao" onclick="add_numero(9)">9</button></td>
+                    <td><button class="botao" onclick="add_operador('/')">/</button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="add_numero(4)">4</button></td>
+                    <td><button class="botao" onclick="add_numero(5)">5</button></td>
+                    <td><button class="botao" onclick="add_numero(6)">6</button></td>
+                    <td><button class="botao" onclick="add_operador('*')">*</button></td>
+                    
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="add_numero(1)">1</button></td>
+                    <td><button class="botao" onclick="add_numero(2)">2</button></td>
+                    <td><button class="botao" onclick="add_numero(3)">3</button></td>
+                    <td><button class="botao" onclick="add_operador('+')">+</button></td>
+                    
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="add_numero(0)">0</button></td>
+                    <td><button class="botao" onclick="total()">=</button></td>
+                    <td><button class="botao" onclick="add_ponto('.')">.</button></td>
+                    <td><button class="botao" onclick="add_operador('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button class="botao" onclick="apagar()">C</button></td>
+                    <td><button class="botao" onclick=" apagar_digito()"><</button></td>
+                    <td></td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- HISTÓRICO DAS OPERAÇÕES -->
+
+        <section id="historic">
+            <h2>HISTÓRICO</h2>
+            <table>
+                <tr>
+                    <td><input id="data1" disabled></td>
+                    <td><input id="resultado1" disabled></td>
+                </tr>
+                <tr>
+                    <td><input id ="data2" disabled></td>
+                    <td><input id="resultado2" disabled></td>
+                </tr>
+                <tr>
+                    <td><input id ="data3" disabled></td>
+                    <td><input id="resultado3" disabled></td>
+                </tr>
+                <tr>
+                    <td><input id ="data4" disabled></td>
+                    <td><input id="resultado4" disabled></td>
+                </tr>
+            </table>
+            <button id="btnHist" onclick="apagarHistorico()">Apagar histórico</button>
+        </section>
+    </article>
+    
+    <script src="script.js"></script>
+</body>
+</html>
